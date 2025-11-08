@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sweet Sunset — Rosy Studio</title>
+  <meta name="theme-color" content="#ffd6e8">
+  <style>
+    :root{--accent:#ff6fa3;--bg:#fff7f9}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);font-family:system-ui,Segoe UI,Roboto,Arial;color:#46243a;padding:26px}
+    .wrap{max-width:900px;margin:0 auto;background:#fff;border-radius:16px;padding:20px;box-shadow:0 10px 28px rgba(255,105,150,0.06)}
+    a.back{color:var(--accent);text-decoration:none;font-weight:700}
+    header h1{margin:6px 0 0 0;color:#b02d55}
+    .artwork{margin-top:14px}
+    .artwork svg{width:100%;height:420px;border-radius:12px}
+    .caption{margin-top:10px;color:#7a3d4e}
+    .controls{margin-top:12px}
+    .link{background:linear-gradient(90deg,#fff,#fff0f6);padding:8px 10px;border-radius:10px;border:1px solid rgba(255,140,180,0.04);text-decoration:none;color:var(--accent);font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to home</a>
+    <header>
+      <h1>Sweet Sunset</h1>
+      <div style="color:#7a3d4e;font-size:14px">digital study • soft gradients • 2025</div>
+    </header>
+
+    <main class="artwork" role="main" aria-label="Sweet Sunset artwork">
+      <svg viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+        <title id="title">Sweet Sunset</title>
+        <desc id="desc">A gentle sunset made from layered pink gradients and a smiling sun.</desc>
+        <defs>
+          <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#fff1f6"/>
+            <stop offset="0.4" stop-color="#ffd6e8"/>
+            <stop offset="1" stop-color="#fff8fb"/>
+          </linearGradient>
+        </defs>
+        <rect width="900" height="600" fill="url(#sky)" rx="16"/>
+        <g transform="translate(120,80)">
+          <circle cx="420" cy="220" r="110" fill="#ff8db2"/>
+          <path d="M0 420 q220 -260 540 -200 q160 30 260 120 L900 600 H0 Z" fill="#fff0f6"/>
+          <g transform="translate(340,160)" fill="#fff" opacity="0.6">
+            <circle cx="6" cy="6" r="4"/>
+            <circle cx="60" cy="20" r="3"/>
+          </g>
+          <g transform="translate(420,220)" fill="#fff4" opacity="0.9">
+            <circle cx="0" cy="0" r="6"/>
+          </g>
+          <!-- smiling face -->
+          <g transform="translate(400,200)" fill="#fff" opacity="0.95">
+            <path d="M-30 10 q30 30 60 0" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="-18" cy="-6" r="6"/>
+            <circle cx="18" cy="-6" r="6"/>
+          </g>
+        </g>
+      </svg>
+
+      <div class="caption">
+        <p>Warm layers, soft shapes — Sweet Sunset is made to feel like a cozy evening in candy-colored skies.</p>
+        <div class="controls">
+          <a class="link" href="index.html">Back to gallery</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
