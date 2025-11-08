@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dreamscape — Rosy Studio</title>
+  <meta name="theme-color" content="#ffdbec">
+  <style>
+    :root{--accent:#ff6fa3}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#fff1f6,#fff);color:#41263a;padding:28px}
+    .wrap{max-width:900px;margin:0 auto;background:#fff;border-radius:16px;padding:20px;box-shadow:0 12px 30px rgba(255,105,150,0.06)}
+    a.back{color:var(--accent);text-decoration:none;font-weight:700}
+    header h1{margin:8px 0 0 0;color:#b02d55}
+    .art svg{width:100%;height:420px;border-radius:12px}
+    .desc{margin-top:12px;color:#7a3d4e}
+    .small{font-size:13px;color:#8a4a63}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to home</a>
+    <header>
+      <h1>Dreamscape</h1>
+      <div class="small">playful composition • pastel shapes</div>
+    </header>
+
+    <div class="art" role="img" aria-label="Dreamscape artwork">
+      <svg viewBox="0 0 900 600" preserveAspectRatio="xMidYMid meet">
+        <rect width="900" height="600" rx="16" fill="#fff6fb"/>
+        <g transform="translate(60,60)">
+          <g transform="translate(0,0)">
+            <ellipse cx="200" cy="160" rx="140" ry="90" fill="#ffbfdc"/>
+            <rect x="360" y="80" width="220" height="120" rx="60" fill="#ffc5dd" opacity="0.95"/>
+            <circle cx="660" cy="210" r="80" fill="#ff9ecb"/>
+            <path d="M80 420 q150 -320 360 -120 q160 160 340 80 L900 540 H0 Z" fill="#fff0f6"/>
+            <g transform="translate(180,50)" fill="#fff" opacity="0.6">
+              <circle cx="20" cy="20" r="6"/>
+              <circle cx="60" cy="40" r="5"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <p class="desc">Dreamscape is a playful experiment with scale and layering; keep it as-is or edit the SVG shapes to make it your own.</p>
+  </div>
+</body>
+</html>
