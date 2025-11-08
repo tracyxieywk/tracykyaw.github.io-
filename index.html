@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffd6e8">
+  <title>Rosy Studio — Cute Pink Art Portfolio</title>
+  <style>
+    :root{
+      --pink:#ff9ecb;
+      --soft:#ffd6e8;
+      --accent:#ff6fa3;
+      --muted:#fff0f6;
+      --card:#fff;
+      --radius:18px;
+      --max:1100px;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--muted),#fff 40%);
+      color:#333;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:30px 20px;
+      display:flex;
+      justify-content:center;
+    }
+    .site{
+      width:100%;
+      max-width:var(--max);
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+      border-radius:24px;
+      box-shadow: 0 10px 30px rgba(255,150,190,0.12);
+      padding:32px;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:64px;
+      height:64px;
+      background: radial-gradient(circle at 30% 30%, #fff6, transparent 20%), linear-gradient(135deg,var(--pink),var(--accent));
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 6px 18px rgba(255,105,150,0.14);
+      flex-shrink:0;
+    }
+    .logo svg{filter:drop-shadow(0 2px 8px rgba(255,105,150,0.18))}
+    h1{font-size:20px;margin:0}
+    p.sub{margin:0;font-size:13px;color:#7a3d4e}
+    nav a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 12px;
+      border-radius:12px;
+    }
+    nav a:hover{background:rgba(255,111,154,0.08)}
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+      align-items:center;
+      margin-bottom:26px;
+    }
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      nav{display:none}
+      header{flex-direction:column;align-items:center}
+    }
+    .intro{
+      padding:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.5));
+      border-radius:14px;
+      border:1px solid rgba(255,140,180,0.06);
+    }
+    .intro h2{margin:0 0 8px 0;font-size:28px;color:#b02d55}
+    .intro p{margin:0;color:#6e3a49}
+    .cta{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      background:var(--accent);
+      color:white;
+      padding:10px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 8px 18px rgba(255,105,150,0.12);
+    }
+    .btn.ghost{
+      background:transparent;
+      color:var(--accent);
+      border:2px solid rgba(255,111,154,0.12);
+      font-weight:700;
+    }
+    .preview{
+      padding:18px;
+      background:linear-gradient(180deg, var(--soft), #fff);
+      border-radius:14px;
+      border:1px solid rgba(255,140,180,0.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      flex-direction:column;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:16px;
+      margin-top:10px;
+    }
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:12px;
+      box-shadow:0 8px 20px rgba(255,140,180,0.06);
+      border:1px solid rgba(255,140,180,0.04);
+      text-decoration:none;
+      color:inherit;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .thumb{
+      width:84px;
+      height:64px;
+      border-radius:10px;
+      overflow:hidden;
+      flex-shrink:0;
+      display:inline-block;
+      background:linear-gradient(135deg,#ffd6e8,#ffb6d1);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .card h3{margin:0;font-size:15px}
+    .card p{margin:2px 0 0 0;font-size:12px;color:#7a3d4e}
+    footer{
+      margin-top:22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      color:#9b4b63;
+    }
+    .heart{color:var(--accent);font-weight:700}
+    .tag{
+      background:linear-gradient(90deg,#fff,#fff0f6);
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid rgba(255,140,180,0.04);
+      font-size:13px;
+      color:#7a3d4e;
+    }
+  </style>
+</head>
+<body>
+  <div class="site" role="main">
+    <header>
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true">
+          <!-- cute heart logo -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21s-7.2-4.6-9.1-7.1C-0.2 9 5.1 4 8.8 6.1 10.5 7.2 12 9 12 9s1.5-1.8 3.2-2.9C18.9 4 23.2 9 21.1 13.9 19.2 16.4 12 21 12 21z" fill="#fff"/>
+            <path d="M12 3c1.6 0 3 1.2 3 2.8 0 .4-.1.8-.3 1.2l.3-.1C16.3 6.9 17 6.3 17 5.7 17 4 15.6 3 14 3c-1 0-1.8.4-2.4 1-.6-.6-1.4-1-2.4-1C9.4 3 8 4 8 5.7c0 .6.7 1.2 1.7 1.2l.3.1c-.2-.4-.3-.8-.3-1.2C9 4.2 10.4 3 12 3z" fill="#ffd6e8" opacity="0.85"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Rosy Studio</h1>
+          <p class="sub">cute, pink, and dreamy illustrations</p>
+        </div>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="art-rosy.html">Rosy Garden</a>
+        <a href="art-sunset.html">Sweet Sunset</a>
+        <a href="art-dream.html">Dreamscape</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="intro">
+        <h2 id="hero-title">Welcome to my cute pink portfolio</h2>
+        <p>I've made this tiny collection of artworks using soft shapes, pastel pinks, and big feelings. Click a piece to open a full page with details.</p>
+        <div class="cta">
+          <a class="btn" href="art-rosy.html">View Rosy Garden</a>
+          <a class="btn ghost" href="#gallery">Browse gallery</a>
+        </div>
+      </div>
+
+      <aside class="preview" aria-label="Featured artwork">
+        <svg width="200" height="140" viewBox="0 0 400 280" role="img" aria-labelledby="featTitle featDesc">
+          <title id="featTitle">Featured: Rosy Garden</title>
+          <desc id="featDesc">A soft abstract garden of hearts and petals in pink tones.</desc>
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#fff1f5"/>
+              <stop offset="1" stop-color="#ffd6e8"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="280" rx="20" fill="url(#g1)"/>
+          <g transform="translate(40,30)" fill-opacity="0.95">
+            <circle cx="60" cy="60" r="44" fill="#ff9ecb"/>
+            <circle cx="140" cy="40" r="30" fill="#ffbfdc"/>
+            <ellipse cx="220" cy="90" rx="48" ry="32" fill="#ffb6d1"/>
+            <path d="M120 140 q-10 -40 40 -54 q60 14 44 54 z" fill="#ffc5dd"/>
+            <g transform="translate(24,12)" fill="#fff" opacity="0.7">
+              <circle cx="30" cy="30" r="6"/>
+              <circle cx="98" cy="25" r="5"/>
+              <circle cx="160" cy="60" r="4"/>
+            </g>
+          </g>
+        </svg>
+        <div style="text-align:center">
+          <strong>Featured</strong>
+          <div style="font-size:13px;color:#7a3d4e">Rosy Garden — click a card below</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" style="margin:6px 0 12px 0;color:#b02d55">Gallery</h2>
+      <div class="grid">
+        <a class="card" href="art-rosy.html">
+          <div class="thumb" aria-hidden="true">
+            <!-- small thumbnail SVG -->
+            <svg width="84" height="64" viewBox="0 0 120 90" role="img" aria-hidden="true">
+              <rect width="120" height="90" rx="8" fill="#ffd6e8"/>
+              <circle cx="36" cy="40" r="22" fill="#ff9ecb"/>
+              <ellipse cx="84" cy="55" rx="20" ry="12" fill="#ffb6d1"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Rosy Garden</h3>
+            <p>an orchard of hearts & petals</p>
+          </div>
+        </a>
+
+        <a class="card" href="art-sunset.html">
+          <div class="thumb">
+            <svg width="84" height="64" viewBox="0 0 120 90" role="img" aria-hidden="true">
+              <rect width="120" height="90" rx="8" fill="#fff0f6"/>
+              <rect x="0" y="34" width="120" height="28" rx="6" fill="#ffd6e8"/>
+              <circle cx="60" cy="48" r="18" fill="#ff6fa3"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Sweet Sunset</h3>
+            <p>soft gradient skies</p>
+          </div>
+        </a>
+
+        <a class="card" href="art-dream.html">
+          <div class="thumb">
+            <svg width="84" height="64" viewBox="0 0 120 90" role="img" aria-hidden="true">
+              <rect width="120" height="90" rx="8" fill="#ffeef6"/>
+              <path d="M10 70 Q40 20 70 70 T120 70" fill="#ffbfdc"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Dreamscape</h3>
+            <p>floating pastel shapes</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="tag">Made with <span class="heart">♥</span> by you</div>
+      <div style="font-size:13px">Want changes? Duplicate the files and edit the SVG art or text.</div>
+    </footer>
+  </div>
+</body>
+</html>
